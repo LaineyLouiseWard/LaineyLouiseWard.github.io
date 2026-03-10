@@ -4,54 +4,74 @@ import Hero from '../components/Hero.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
+<BaseLayout title="About | Lainey Ward" description="About Lainey Ward — PhD researcher in AI and meteorology at University College Dublin">
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero
 				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
-			>
-				<img
-					width="1553"
-					height="873"
-					src="/assets/at-work.jpg"
-					alt="Jeanine White at work with a colleague"
-				/>
-			</Hero>
+				tagline="PhD researcher at the UCD Decarb-AI Centre and Innovate for Ireland iScholar, working at the intersection of AI, meteorology, and climate science."
+			/>
 
 			<section>
 				<h2 class="section-title">Background</h2>
 				<div class="content">
 					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy. Sed
-						do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum
-						id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
-						pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
+						I am a PhD student at the University College Dublin Decarb-AI Centre ("Decarbonising Ireland: AI-Powered Pathways to Climate Resilience") and an Innovate for Ireland iScholar. Previously, I worked as an Aeronautical Meteorological Officer at Met Éireann and hold an MSc in Atmosphere, Ocean and Climate from the University of Reading and a BSc in Physics from UCD.
 					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Research</h2>
+				<div class="content">
 					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
+						My research focuses on the subseasonal-to-seasonal predictability of multi-hazard weather and climate events using machine learning. I develop data-driven methods that complement traditional numerical weather prediction, with applications in extreme weather risk and compound event analysis.
 					</p>
-					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
-					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Experience</h2>
+				<div class="content">
+					<ul>
+						<li><strong>PhD Student</strong> — University College Dublin, School of Civil Engineering (2025–2029)</li>
+						<li><strong>Tutor and Demonstrator</strong> — University College Dublin (2025–present)</li>
+						<li><strong>Aeronautical Meteorological Officer</strong> — Met Éireann (2024–2025)</li>
+					</ul>
 				</div>
 			</section>
 			<section>
 				<h2 class="section-title">Education</h2>
 				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
+					<ul>
+						<li><strong>PhD</strong> — University College Dublin, School of Civil Engineering</li>
+						<li><strong>MSc Atmosphere, Ocean and Climate</strong> — University of Reading, Department of Meteorology · Distinction</li>
+						<li><strong>BSc Physics</strong> — University College Dublin, School of Physics · 2:1</li>
+					</ul>
 				</div>
 			</section>
 			<section>
 				<h2 class="section-title">Skills</h2>
 				<div class="content">
-					<p>officia unde omnis</p>
+					<p class="tools-line">Python · MATLAB · R · PyTorch · Git · HPC · LaTeX · Web Development · Meteorological data APIs</p>
+					<ul>
+						<li>Machine learning for atmospheric and climate prediction</li>
+						<li>Analysis of large meteorological and climate datasets, including reanalysis and forecast products</li>
+						<li>Operational weather forecasting and interpretation of observational products</li>
+						<li>Scientific communication through presentations, reports, and teaching</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Development</h2>
+				<div class="content">
+					<ul>
+						<li><strong>ECMWF Anemoi Training</strong> — AI weather forecasting with AIFS</li>
+						<li><strong>ICHEC HPC Training</strong> — High-performance computing and scalable AI</li>
+						<li><strong>Dragon's Den Competition</strong> — Innovate for Ireland</li>
+						<li><strong>UK Met Office Forecasting</strong> — Operational forecasting · Distinction</li>
+						<li><strong>ARK Presentation Training</strong> — Professional speaking skills</li>
+						<li><strong>NextGenEC 2024</strong> — Dissertation poster presentation</li>
+					</ul>
+					<p class="pd-link"><a href="/development/">View all</a></p>
 				</div>
 			</section>
 		</main>
@@ -67,17 +87,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		gap: 3.5rem;
 	}
 
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
-
 	section {
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
 		color: var(--gray-200);
+		padding-top: 1rem;
 	}
 
 	.section-title {
@@ -99,6 +114,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	.content :global(a:hover),
 	.content :global(a:focus) {
 		text-decoration-color: currentColor;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.tools-line {
+		font-weight: 600;
+		color: var(--gray-0);
+		margin-bottom: 0.5rem;
+	}
+
+	.pd-link {
+		margin-top: 0.5rem;
 	}
 
 	@media (min-width: 50em) {

@@ -31,7 +31,7 @@ const { Content } = await render(entry);
 		<div class="stack gap-15">
 			<header>
 				<div class="wrapper stack gap-2">
-					<a class="back-link" href="/work/"><Icon icon="arrow-left" /> Work</a>
+					<a class="back-link" href="/work/"><Icon icon="arrow-left" /> Projects</a>
 					<Hero title={entry.data.title} align="start">
 						<div class="details">
 							<div class="tags">
@@ -147,4 +147,106 @@ const { Content } = await render(entry);
 			font-size: var(--text-2xl);
 		}
 	}
+
+	.content :global(.github-btn) {
+		display: inline-block;
+		padding: 0.5rem 1.25rem;
+		background: var(--accent-regular);
+		color: var(--accent-text-over);
+		border-radius: 999rem;
+		font-size: var(--text-sm);
+		font-weight: 600;
+		text-decoration: none;
+		transition: background var(--theme-transition);
+	}
+
+	.content :global(.github-btn:hover),
+	.content :global(.github-btn:focus) {
+		background: var(--accent-dark);
+		text-decoration: none;
+	}
+
+	/* Slide carousel in content */
+	.content :global(.slide-carousel) {
+		position: relative;
+		overflow: hidden;
+		border-radius: 0.75rem;
+		background: var(--gray-900);
+		margin: 1.5rem 0;
+	}
+
+	.content :global(.slide-track) {
+		display: flex;
+		transition: transform 0.3s ease;
+	}
+
+	.content :global(.slide-track img) {
+		min-width: 100%;
+		width: 100%;
+		height: auto;
+		display: block;
+		object-fit: contain;
+		background: var(--gray-900);
+		border-radius: 0;
+		margin: 0;
+		box-shadow: none;
+		border: none;
+	}
+
+	.content :global(.slide-dots) {
+		position: absolute;
+		bottom: 0.5rem;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		gap: 0.4rem;
+	}
+
+	.content :global(.slide-dots button) {
+		width: 0.5rem;
+		height: 0.5rem;
+		border-radius: 50%;
+		border: none;
+		background: var(--gray-600);
+		padding: 0;
+		cursor: pointer;
+		transition: background 0.2s;
+	}
+
+	.content :global(.slide-dots button.active) {
+		background: var(--accent-regular);
+	}
 </style>
+
+<script>
+	document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+		const track = carousel.querySelector('.slide-track') as HTMLElement;
+		const images = track?.querySelectorAll('img') ?? [];
+		const dotsContainer = carousel.querySelector('.slide-dots');
+		if (!track || images.length === 0 || !dotsContainer) return;
+
+		let current = 0;
+
+		images.forEach((_, i) => {
+			const dot = document.createElement('button');
+			dot.setAttribute('aria-label', `Slide ${i + 1}`);
+			if (i === 0) dot.classList.add('active');
+			dot.addEventListener('click', () => goTo(i));
+			dotsContainer.appendChild(dot);
+		});
+
+		function goTo(index: number) {
+			current = index;
+			track!.style.transform = `translateX(-${current * 100}%)`;
+			dotsContainer!.querySelectorAll('button').forEach((d, i) => {
+				d.classList.toggle('active', i === current);
+			});
+		}
+
+		let timer = setInterval(() => goTo((current + 1) % images.length), 4000);
+		carousel.addEventListener('mouseenter', () => clearInterval(timer));
+		carousel.addEventListener('mouseleave', () => {
+			timer = setInterval(() => goTo((current + 1) % images.length), 4000);
+		});
+	});
+</script>

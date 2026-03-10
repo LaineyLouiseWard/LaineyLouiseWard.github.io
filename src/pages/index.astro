@@ -1,8 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-// Component Imports
 import CallToAction from '../components/CallToAction.astro';
-// Page section components
 import ContactCTA from '../components/ContactCTA.astro';
 import Grid from '../components/Grid.astro';
 import Hero from '../components/Hero.astro';
@@ -10,16 +8,11 @@ import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import Skills from '../components/Skills.astro';
-// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// Content Fetching: List four most recent work projects
 const projects = (await getCollection('work'))
 	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
 	.slice(0, 4);
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
 ---
 
 <BaseLayout>
@@ -27,19 +20,22 @@ const projects = (await getCollection('work'))
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Hello, my name is Jeanine White"
-					tagline="I am a Creative Developer who is currently based in Portland, Oregon."
+					title="PhD Researcher"
+					tagline="PhD researcher and Innovate for Ireland iScholar at the UCD Decarb-AI Centre, studying subseasonal-to-seasonal predictability of multi-hazard weather and climate events using machine learning."
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
+						<Pill><Icon icon="strategy" size="1.33em" /> Artificial Intelligence</Pill>
+						<Pill><Icon icon="terminal-window" size="1.33em" /> Weather & Climate</Pill>
+						<Pill><Icon icon="code" size="1.33em" /> Hazards</Pill>
 					</div>
+					<p class="hero-detail">
+						Explore my research, projects, and professional development below.
+					</p>
 				</Hero>
 
 				<img
-					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
+					alt="Lainey Ward"
 					width="480"
 					height="620"
 					src="/assets/portrait.jpg"
@@ -52,8 +48,8 @@ const projects = (await getCollection('work'))
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Work</h3>
-					<p>Take a look below at some of my featured work for clients from the past few years.</p>
+					<h3>Projects</h3>
+					<p>Work and projects across AI, meteorology, and scientific communication.</p>
 				</header>
 
 				<div class="gallery">
@@ -78,23 +74,165 @@ const projects = (await getCollection('work'))
 
 			<section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
-					<p>
-						I have been fortunate enough to receive praise for my work in several publications. Take
-						a look below to learn more.
-					</p>
+					<h3>Experience</h3>
 				</header>
 
 				<div class="gallery">
-					<Grid variant="small">
-						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
-								<li class="mention-card">
-									<p>{brand}</p>
-								</li>
-							))
-						}
-					</Grid>
+					<div class="timeline">
+						<div class="timeline-entry">
+							<div class="timeline-marker"></div>
+							<div class="timeline-content">
+								<p class="timeline-date">2025 – 2029</p>
+								<h4>PhD in AI & Meteorology — University College Dublin</h4>
+								<p class="timeline-org">School of Civil Engineering · Decarb-AI Programme</p>
+								<p class="timeline-grade">Innovate for Ireland iScholar</p>
+								<p class="timeline-detail">Machine learning · AI · subseasonal-to-seasonal prediction · multi-hazard events · high-performance computing</p>
+							</div>
+						</div>
+						<div class="timeline-entry">
+							<div class="timeline-marker"></div>
+							<div class="timeline-content">
+								<p class="timeline-date">2025 – present</p>
+								<h4>Tutor and Demonstrator — University College Dublin</h4>
+								<p class="timeline-org">School of Civil Engineering</p>
+								<p class="timeline-detail">Programming tutorials · mathematical problem-solving · undergraduate teaching · scientific communication</p>
+							</div>
+						</div>
+						<div class="timeline-entry">
+							<div class="timeline-marker"></div>
+							<div class="timeline-content">
+								<p class="timeline-date">2024 – 2025</p>
+								<h4>Aeronautical Meteorological Officer — Met Éireann</h4>
+								<p class="timeline-org">Aeronautical Meteorology Division</p>
+								<p class="timeline-detail">Aviation forecasting · observational products · forecast interpretation · <a href="https://rmets.onlinelibrary.wiley.com/doi/10.1002/joc.70185" target="_blank" rel="noopener">data rescue for climate research</a></p>
+							</div>
+						</div>
+						<div class="timeline-entry">
+							<div class="timeline-marker"></div>
+							<div class="timeline-content">
+								<p class="timeline-date">2023 – 2024</p>
+								<h4>MSc Atmosphere, Ocean and Climate — University of Reading</h4>
+								<p class="timeline-org">Department of Meteorology</p>
+								<p class="timeline-grade">Distinction · Dissertation A</p>
+								<p class="timeline-detail">Numerical modelling · fluid dynamics · oceanography · weather forecasting · climate change</p>
+							</div>
+						</div>
+						<div class="timeline-entry">
+							<div class="timeline-marker"></div>
+							<div class="timeline-content">
+								<p class="timeline-date">2018 – 2022</p>
+								<h4>BSc Physics — University College Dublin</h4>
+								<p class="timeline-org">School of Physics</p>
+								<p class="timeline-grade">2:1 · Dissertation A+</p>
+								<p class="timeline-detail">Computational physics · advanced laboratory · numerical modelling · data analysis</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="publications" class="section with-background">
+				<header class="section-header stack gap-2 lg:gap-4">
+					<h3>Publications</h3>
+				</header>
+
+				<div class="gallery">
+					<div class="publications">
+						<div class="pub-item">
+							<img class="pub-img" src="/assets/publication.gif" alt="Molecular dynamics simulation of water harvesting by ionic liquids" loading="lazy" />
+							<div class="pub-body">
+								<h4>Water Harvesting by Thermoresponsive Ionic Liquids: A Molecular Dynamics Study of the Water Absorption Kinetics and of the Role of Nanostructuring</h4>
+								<p class="pub-authors">Nancy C. Forero-Martinez, Robinson Cortes-Huerto, Lainey Ward, Pietro Ballone</p>
+								<p class="pub-journal"><em>The Journal of Physical Chemistry B</em> · Volume 127, Issue 24 · June 2023 · Open Access</p>
+								<p class="pub-desc">Open-access paper investigating water harvesting from the atmosphere using thermoresponsive ionic liquids, with molecular dynamics simulations used to study absorption kinetics and nanostructuring.</p>
+								<div class="pub-tags">
+									<span class="pub-tag">Computational Physics</span>
+									<span class="pub-tag">Physical Chemistry</span>
+									<span class="pub-tag">Visual Molecular Dynamics</span>
+								</div>
+								<a class="pub-btn" href="https://pubs.acs.org/doi/10.1021/acs.jpcb.3c01655" target="_blank" rel="noopener">Read paper</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section with-background bg-variant">
+				<header class="section-header stack gap-2 lg:gap-4">
+					<h3>Recognition</h3>
+				</header>
+
+				<div class="gallery">
+					<div class="impact-cards">
+						<div class="impact-card">
+							<Icon icon="trophy" color="var(--accent-regular)" size="2rem" />
+							<h4>Met Office MSc Dissertation Prize</h4>
+							<p>Outstanding research on long-duration storage and meteorological drivers of net-zero electricity systems.</p>
+						</div>
+						<div class="impact-card">
+							<Icon icon="trophy" color="var(--accent-regular)" size="2rem" />
+							<h4>UCD Entrance Scholar</h4>
+							<p>Academic excellence on entry to University College Dublin.</p>
+						</div>
+						<div class="impact-card">
+							<Icon icon="trophy" color="var(--accent-regular)" size="2rem" />
+							<h4>Decarb-AI PhD Scholarship</h4>
+							<p>Funded PhD position within Decarbonising Ireland: AI-Powered Pathways to Climate Resilience.</p>
+						</div>
+						<div class="impact-card">
+							<Icon icon="trophy" color="var(--accent-regular)" size="2rem" />
+							<h4>COST Action ANTICIPATE (CA24144)</h4>
+							<p>Member of the European COST Action network on extended-range and subseasonal multi-hazard prediction and early warning systems.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section with-background with-cta">
+				<header class="section-header stack gap-2 lg:gap-4">
+					<h3>Development</h3>
+				</header>
+
+				<div class="gallery">
+					<div class="pd-tiles">
+						<div class="pd-tile">
+							<Icon icon="strategy" color="var(--accent-regular)" size="1.2rem" />
+							<h4>ECMWF Anemoi Training</h4>
+							<p>AI weather forecasting with AIFS and Anemoi</p>
+						</div>
+						<div class="pd-tile">
+							<Icon icon="terminal-window" color="var(--accent-regular)" size="1.2rem" />
+							<h4>ICHEC HPC Training</h4>
+							<p>High-performance computing and scalable AI</p>
+						</div>
+						<div class="pd-tile">
+							<Icon icon="rocket-launch" color="var(--accent-regular)" size="1.2rem" />
+							<h4>Dragon's Den Competition</h4>
+							<p>Entrepreneurship and innovation pitch competition</p>
+						</div>
+						<div class="pd-tile">
+							<Icon icon="sun" color="var(--accent-regular)" size="1.2rem" />
+							<h4>UK Met Office Forecasting</h4>
+							<p>Operational weather forecasting training</p>
+						</div>
+						<div class="pd-tile">
+							<Icon icon="microphone-stage" color="var(--accent-regular)" size="1.2rem" />
+							<h4>ARK Presentation Training</h4>
+							<p>Professional presentation and speaking skills</p>
+						</div>
+						<div class="pd-tile">
+							<Icon icon="pencil-line" color="var(--accent-regular)" size="1.2rem" />
+							<h4>NextGenEC 2024</h4>
+							<p>Dissertation poster presentation at an energy-climate modelling workshop</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="cta">
+					<CallToAction href="/development/">
+						View All
+						<Icon icon="arrow-right" size="1.2em" />
+					</CallToAction>
 				</div>
 			</section>
 		</main>
@@ -115,10 +253,15 @@ const projects = (await getCollection('work'))
 		display: none;
 	}
 
+	.hero-detail {
+		color: var(--gray-300);
+		font-size: var(--text-md);
+	}
+
 	.hero img {
 		aspect-ratio: 5 / 4;
 		object-fit: cover;
-		object-position: top;
+		object-position: center 15%;
 		border-radius: 1.5rem;
 		box-shadow: var(--shadow-md);
 	}
@@ -141,6 +284,7 @@ const projects = (await getCollection('work'))
 			aspect-ratio: 3 / 4;
 			border-radius: 4.5rem;
 			object-fit: cover;
+			object-position: center 15%;
 		}
 	}
 
@@ -227,23 +371,317 @@ const projects = (await getCollection('work'))
 
 	/* ====================================================== */
 
-	.mention-card {
+	.timeline {
+		position: relative;
 		display: flex;
-		height: 7rem;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		border: 1px solid var(--gray-800);
-		border-radius: 1.5rem;
+		flex-direction: column;
+		gap: 0;
+		padding-left: 2rem;
+	}
+
+	.timeline::before {
+		content: '';
+		position: absolute;
+		left: 0.5rem;
+		top: 0.75rem;
+		bottom: 0.75rem;
+		width: 2px;
+		background: var(--gray-800);
+	}
+
+	.timeline-entry {
+		position: relative;
+		padding: 0 0 2.5rem 1.5rem;
+	}
+
+	.timeline-entry:last-child {
+		padding-bottom: 0;
+	}
+
+	.timeline-marker {
+		position: absolute;
+		left: -1.65rem;
+		top: 0.55rem;
+		width: 0.75rem;
+		height: 0.75rem;
+		border-radius: 50%;
+		background: var(--accent-regular);
+		border: 2px solid var(--gray-999);
+		box-shadow: 0 0 0 2px var(--accent-regular);
+	}
+
+	.timeline-content h4 {
+		font-size: var(--text-lg);
+		color: var(--gray-0);
+		margin: 0;
+	}
+
+	.timeline-date {
+		font-size: var(--text-sm);
+		color: var(--accent-regular);
+		margin: 0 0 0.25rem;
+		font-weight: 600;
+	}
+
+	.timeline-org {
+		font-size: var(--text-sm);
 		color: var(--gray-300);
+		margin: 0.25rem 0 0;
+	}
+
+	.timeline-grade {
+		font-size: var(--text-sm);
+		color: var(--accent-regular);
+		font-weight: 600;
+		margin: 0.15rem 0 0;
+	}
+
+	.timeline-detail {
+		color: var(--gray-400);
+		margin: 0.5rem 0 0;
+		font-size: var(--text-md);
+	}
+
+	.timeline-detail a {
+		color: var(--accent-regular);
+		text-decoration: underline;
+		text-underline-offset: 0.2em;
+	}
+
+	@media (min-width: 50em) {
+		.timeline {
+			padding-left: 3rem;
+		}
+
+		.timeline::before {
+			left: 0.75rem;
+		}
+
+		.timeline-marker {
+			left: -2.4rem;
+			width: 0.875rem;
+			height: 0.875rem;
+		}
+
+		.timeline-content h4 {
+			font-size: var(--text-xl);
+		}
+	}
+
+	/* ====================================================== */
+
+	.publications {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.pub-item {
+		display: flex;
+		flex-direction: column;
+		border: 1px solid var(--gray-800);
+		border-radius: 1rem;
+		overflow: hidden;
 		background: var(--gradient-subtle);
 		box-shadow: var(--shadow-sm);
 	}
 
+	.pub-img {
+		width: 100%;
+		height: 12rem;
+		object-fit: cover;
+		object-position: center center;
+		display: block;
+	}
+
+	.pub-body {
+		padding: 1.25rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+	}
+
+	.pub-item h4 {
+		font-size: var(--text-lg);
+		color: var(--gray-0);
+		margin: 0;
+	}
+
+	.pub-authors {
+		font-size: var(--text-sm);
+		color: var(--gray-300);
+		margin: 0;
+	}
+
+	.pub-journal {
+		font-size: var(--text-sm);
+		color: var(--gray-400);
+		margin: 0;
+	}
+
+	.pub-desc {
+		font-size: var(--text-md);
+		color: var(--gray-300);
+		margin: 0.25rem 0 0;
+	}
+
+	.pub-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+		margin: 0.5rem 0 0;
+	}
+
+	.pub-tag {
+		padding: 0.25rem 0.75rem;
+		font-size: var(--text-sm);
+		color: var(--gray-200);
+		border: 1px solid var(--gray-800);
+		border-radius: 999rem;
+		background: var(--gray-999);
+		white-space: nowrap;
+	}
+
+	.pub-btn {
+		align-self: flex-end;
+		margin-top: 0.5rem;
+		display: inline-flex;
+		place-content: center;
+		padding: 0.4em 1.4em;
+		font-size: var(--text-sm);
+		color: var(--accent-text-over);
+		text-decoration: none;
+		line-height: 1.1;
+		border-radius: 999rem;
+		background: var(--gradient-accent-orange);
+		box-shadow: var(--shadow-sm);
+		white-space: nowrap;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.pub-btn::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		transition: background-color var(--theme-transition);
+		mix-blend-mode: overlay;
+	}
+
+	.pub-btn:focus::after,
+	.pub-btn:hover::after {
+		background-color: hsla(var(--gray-999-basis), 0.3);
+	}
+
 	@media (min-width: 50em) {
-		.mention-card {
-			border-radius: 1.5rem;
-			height: 9.5rem;
+		.pub-item {
+			flex-direction: row;
+		}
+
+		.pub-img {
+			width: 16rem;
+			height: auto;
+			min-height: 100%;
+			flex-shrink: 0;
+			object-fit: cover;
+			object-position: center center;
+		}
+
+		.pub-body {
+			padding: 1.5rem;
+		}
+	}
+
+	/* ====================================================== */
+
+	.impact-cards {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+
+	.impact-card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 0.75rem;
+		border: 1px solid var(--gray-800);
+		border-radius: 1rem;
+		padding: 1.5rem;
+		background: var(--gradient-subtle);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.impact-card h4 {
+		font-size: var(--text-lg);
+		color: var(--gray-0);
+		margin: 0;
+	}
+
+	.impact-card p {
+		color: var(--gray-300);
+		margin: 0;
+		font-size: var(--text-sm);
+	}
+
+	@media (min-width: 50em) {
+		.impact-cards {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		.impact-card {
+			padding: 2rem;
+		}
+	}
+
+	/* ====================================================== */
+
+	.pd-tiles {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
+
+	.pd-tile {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 0.35rem;
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 0.75rem;
+		background: var(--gradient-subtle);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.pd-tile h4 {
+		font-size: var(--text-sm);
+		color: var(--gray-0);
+		margin: 0;
+	}
+
+	.pd-tile p {
+		color: var(--gray-400);
+		margin: 0;
+		font-size: var(--text-sm);
+	}
+
+	@media (min-width: 50em) {
+		.pd-tiles {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1rem;
+		}
+
+		.pd-tile {
+			border-radius: 1rem;
+			padding: 1rem;
+		}
+
+		.pd-tile h4 {
+			font-size: var(--text-md);
 		}
 	}
 </style>
