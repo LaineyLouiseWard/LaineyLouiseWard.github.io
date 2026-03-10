@@ -7,11 +7,19 @@ img_position: top center
 description: |
   MSc research (Distinction · Dissertation A) on the UK's need for underground hydrogen storage to support net-zero electricity by 2050; awarded the Met Office Dissertation Prize.
 tags:
-  - Machine Learning
-  - PCA
+  - Python
+  - Xarray
+  - Pandas
+  - SciPy
+  - scikit-learn
   - Cartopy
-  - HPC
-  - Energy
+  - Matplotlib
+  - netCDF4
+methods:
+  - K-means Clustering
+  - Synoptic Regimes
+  - ERA5 Reanalysis
+  - Hydrogen Storage Modelling
 ---
 
 My MSc dissertation at the University of Reading quantified the UK's need for long-duration underground hydrogen storage to achieve net-zero carbon emissions by 2050. The research examined demand electrification scenarios, offshore wind power deployment, and the meteorological drivers behind energy storage deficits — identifying the weather patterns that cause prolonged shortfalls in renewable generation. The work drew on ERA5 reanalysis data and European-derived power datasets, and was awarded the Met Office MSc Dissertation Prize for outstanding research.

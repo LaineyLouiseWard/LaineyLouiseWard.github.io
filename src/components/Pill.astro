@@ -1,4 +1,12 @@
-<div class="pill"><slot /></div>
+---
+interface Props {
+	variant?: 'tech' | 'method';
+}
+
+const { variant = 'tech' } = Astro.props;
+---
+
+<div class:list={['pill', `pill--${variant}`]}><slot /></div>
 
 <style>
 	.pill {
@@ -12,5 +20,10 @@
 		font-size: var(--text-md);
 		line-height: 1.35;
 		white-space: nowrap;
+	}
+
+	.pill--method {
+		background-color: var(--method-bg, #2563eb);
+		border-color: var(--method-bg, #2563eb);
 	}
 </style>

@@ -7,10 +7,15 @@ img_position: center 40%
 description: |
   Tackling an industry land-cover mapping challenge using deep learning on satellite imagery, now evolving into a research publication.
 tags:
+  - Python
   - PyTorch
-  - UNetFormer
-  - GeoPandas
-  - Rasterio
+  - Albumentations
+  - Rasterio/GDAL
+  - CUDA
+methods:
+  - FT-UNetFormer
+  - Knowledge Distillation
+  - Semantic Segmentation
 ---
 
 This project originated at the AI Climate Sustainability Sandbox, a five-day research-meets-industry challenge held at Trinity College Dublin, where ODOS Technology provided high-resolution satellite imagery for rural land-cover segmentation — a task complicated by severe class imbalance. The work has since evolved into a full academic research project and manuscript (joint co-authored, pending submission) targeting a *Remote Sensing* special issue. My contribution focused on developing the experiment workflows and a reproducible training pipeline.

@@ -34,8 +34,15 @@ const { Content } = await render(entry);
 					<a class="back-link" href="/work/"><Icon icon="arrow-left" /> Projects</a>
 					<Hero title={entry.data.title} align="start">
 						<div class="details">
-							<div class="tags">
-								{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
+							<div class="tag-groups">
+								<div class="tags">
+									{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
+								</div>
+								{entry.data.methods && entry.data.methods.length > 0 && (
+									<div class="tags">
+										{entry.data.methods.map((m) => <Pill variant="method">{m}</Pill>)}
+									</div>
+								)}
 							</div>
 							<p class="description">{entry.data.description}</p>
 						</div>
@@ -74,8 +81,15 @@ const { Content } = await render(entry);
 		align-items: center;
 	}
 
+	.tag-groups {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
 	.tags {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 0.5rem;
 	}
 

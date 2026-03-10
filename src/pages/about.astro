@@ -33,7 +33,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				<div class="content">
 					<ul>
 						<li><strong>PhD Student</strong> — University College Dublin, School of Civil Engineering (2025–2029)</li>
-						<li><strong>Tutor and Demonstrator</strong> — University College Dublin (2025–present)</li>
+						<li><strong>Tutor & Demonstrator</strong> — University College Dublin (2025–present)</li>
 						<li><strong>Aeronautical Meteorological Officer</strong> — Met Éireann (2024–2025)</li>
 					</ul>
 				</div>
@@ -51,7 +51,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			<section>
 				<h2 class="section-title">Skills</h2>
 				<div class="content">
-					<p class="tools-line">Python · MATLAB · R · PyTorch · Git · HPC · LaTeX · Web Development · Meteorological data APIs</p>
+					<p class="tools-line">Python · MATLAB · R · PyTorch · Git · HPC · LaTeX · Web Development · Meteorological Data APIs</p>
+					<p class="tools-line tools-secondary">VS Code · Conda · GitHub Copilot · Claude Code · ChatGPT</p>
 					<ul>
 						<li>Machine learning for atmospheric and climate prediction</li>
 						<li>Analysis of large meteorological and climate datasets, including reanalysis and forecast products</li>
@@ -129,6 +130,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		font-weight: 600;
 		color: var(--gray-0);
 		margin-bottom: 0.5rem;
+	}
+
+	.tools-secondary {
+		font-weight: 400;
+		color: var(--gray-300);
 	}
 
 	.pd-link {
