@@ -1,30 +1,49 @@
-# Astro Starter Kit: Portfolio
+# Portfolio — LaineyLouiseWard.github.io
 
-```sh
-npm create astro@latest -- --template portfolio
+![Astro 5](https://img.shields.io/badge/Astro-5-FF5D01?logo=astro&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-blue?logo=typescript&logoColor=white)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-deployed-222?logo=github&logoColor=white)
+
+Personal research portfolio showcasing PhD work in AI for weather and climate
+prediction at University College Dublin. Includes project write-ups,
+professional development, education history, and technical skills.
+
+This is the central hub linking to all other repositories in the research
+portfolio.
+
+---
+
+## Tech Stack
+
+| Category | Tools |
+|----------|-------|
+| **Framework** | Astro 5 (static site generator) |
+| **Language** | TypeScript |
+| **Content** | Markdown with Astro Content Collections (Zod schemas) |
+| **Styling** | CSS custom properties, dark/light theme toggle |
+| **Deployment** | GitHub Pages |
+
+---
+
+## Development
+
+```bash
+npm install
+npm run dev       # Start dev server at localhost:4321
+npm run build     # Build to ./dist/
+npm run preview   # Preview production build
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/portfolio)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/portfolio)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/portfolio/devcontainer.json)
+---
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Project structure
 
-![portfolio](https://user-images.githubusercontent.com/357379/210779178-a98f0fb7-6b1a-4068-894c-8e1403e26654.jpg)
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```
+src/
+├── pages/              Route pages (index, about, work, development)
+├── components/         Reusable Astro components (Hero, Nav, Skills, etc.)
+├── layouts/            Base layout wrapper
+├── content/work/       Markdown project write-ups
+└── styles/             Global CSS with design system variables
+public/                 Static assets (images, CV, icons)
+```
