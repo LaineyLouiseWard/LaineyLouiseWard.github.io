@@ -22,3 +22,9 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# private files
+Profile.jpg
+CurriculumVitae.pdf
+ME.md
+SITE_STRUCTURE.md
