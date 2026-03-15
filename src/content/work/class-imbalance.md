@@ -18,7 +18,7 @@ methods:
   - Semantic Segmentation
 ---
 
-This project originated at the AI Climate Sustainability Sandbox, a five-day research-meets-industry challenge held at Trinity College Dublin, where ODOS Technology provided high-resolution satellite imagery for rural land-cover segmentation — a task complicated by severe class imbalance. The work has since evolved into a full academic research project and manuscript (joint co-authored, pending submission) targeting a *Remote Sensing* special issue. My contribution focused on developing the experiment workflows and a reproducible training pipeline.
+This started at the AI Climate Sustainability Sandbox, a five-day challenge at Trinity College Dublin where ODOS Technology provided high-resolution satellite imagery for rural land-cover segmentation — a problem made difficult by severe class imbalance. It's since grown into a joint research paper (pending submission) targeting a *Remote Sensing* special issue. I built the experiment workflows and training pipeline.
 
 <a class="github-btn" href="https://github.com/LaineyLouiseWard/ClassImbalance" target="_blank" rel="noopener">View GitHub</a>
 

@@ -16,16 +16,16 @@
 	--gray-999_40: hsla(var(--gray-999-basis), 0.4);
 	--gray-999: #ffffff;
 
-	--accent-light: #c561f6;
-	--accent-regular: #7611a6;
-	--accent-dark: #1c0056;
-	--accent-overlay: hsla(280, 89%, 67%, 0.33);
+	--accent-light: #5CE0D6;
+	--accent-regular: #0E9AA7;
+	--accent-dark: #064E5C;
+	--accent-overlay: hsla(175, 70%, 46%, 0.28);
 	--accent-subtle-overlay: var(--accent-overlay);
 	--accent-text-over: var(--gray-999);
 
-	--link-color: var(--accent-regular);
+	--link-color: var(--accent-dark);
 
-	--method-bg: #2563eb;
+	--method-bg: #4A6FA5;
 
 	/* Gradients */
 	--gradient-stop-1: var(--accent-light);
@@ -40,7 +40,7 @@
 	);
 	--gradient-accent-orange: linear-gradient(
 		150deg,
-		#ca7879,
+		#8B6CB5,
 		var(--accent-regular),
 		var(--accent-dark)
 	);
@@ -94,22 +94,22 @@
 	--gray-999-basis: 225, 31%, 5%;
 	--gray-999: #090b11;
 
-	--accent-light: #1c0056;
-	--accent-regular: #7611a6;
-	--accent-dark: #c561f6;
-	--accent-overlay: hsla(280, 89%, 67%, 0.33);
-	--accent-subtle-overlay: hsla(281, 81%, 36%, 0.33);
+	--accent-light: #064E5C;
+	--accent-regular: #0E9AA7;
+	--accent-dark: #5CE0D6;
+	--accent-overlay: hsla(175, 70%, 46%, 0.28);
+	--accent-subtle-overlay: hsla(175, 60%, 30%, 0.33);
 	--accent-text-over: var(--gray-0);
 
 	--link-color: var(--accent-dark);
 
-	--method-bg: #3b82f6;
+	--method-bg: #5A7FB5;
 
-	--gradient-stop-1: #4c11c6;
+	--gradient-stop-1: #087D8A;
 	--gradient-subtle: linear-gradient(150deg, var(--gray-900) 19%, var(--gray-999) 81%);
 	--gradient-accent-orange: linear-gradient(
 		150deg,
-		#ca7879,
+		#A78BCA,
 		var(--accent-regular),
 		var(--accent-light)
 	);
@@ -169,14 +169,17 @@ h5 {
 
 h1 {
 	font-size: var(--text-5xl);
+	letter-spacing: -0.02em;
 }
 
 h2 {
 	font-size: var(--text-4xl);
+	letter-spacing: -0.015em;
 }
 
 h3 {
 	font-size: var(--text-3xl);
+	letter-spacing: -0.01em;
 }
 
 h4 {
@@ -237,6 +240,7 @@ h5 {
 .gap-48 {
 	gap: 12rem;
 }
+
 
 @media (min-width: 50em) {
 	.lg\:gap-2 {

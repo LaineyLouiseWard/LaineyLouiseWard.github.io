@@ -16,8 +16,8 @@ const projects = (await getCollection('work'))
 ---
 
 <BaseLayout>
-	<div class="stack gap-20 lg:gap-48">
-		<div class="wrapper stack gap-8 lg:gap-20">
+	<div class="stack gap-20 lg:gap-30">
+		<div class="wrapper stack gap-8 lg:gap-15">
 			<header class="hero">
 				<Hero
 					title="PhD Researcher"
@@ -30,7 +30,7 @@ const projects = (await getCollection('work'))
 						<Pill><Icon icon="code" size="1.33em" /> Hazards</Pill>
 					</div>
 					<p class="hero-detail">
-						Explore my research, projects, and professional development below.
+						See what I'm working on below.
 					</p>
 				</Hero>
 
@@ -39,17 +39,47 @@ const projects = (await getCollection('work'))
 					width="480"
 					height="620"
 					src="/assets/portrait.jpg"
+					loading="eager"
+					fetchpriority="high"
 				/>
 			</header>
 
 			<Skills />
+
+			<div class="research-card">
+				<div class="research-label">Current PhD Research</div>
+				<h3 class="research-title">Subseasonal-to-Seasonal Prediction of Multi-Hazard Weather Events</h3>
+				<p class="research-org">University College Dublin · Decarb-AI Centre · Innovate for Ireland iScholar</p>
+				<p class="research-desc">Investigating sources of predictability at 2–8 week lead times for compound hydroclimatic extremes — including drought-to-flood and flood-to-drought transitions — and evaluating how current forecast systems (ECMWF SEAS5) can support early warning and climate-informed decision-making over Ireland.</p>
+				<div class="research-tags">
+					<span class="research-tag">ECMWF SEAS5</span>
+					<span class="research-tag">ERA5 Reanalysis</span>
+					<span class="research-tag">Forecast Verification</span>
+					<span class="research-tag">Compound Extremes</span>
+					<span class="research-tag">MJO & Teleconnections</span>
+				</div>
+
+				<div class="research-interests">
+					<h4 class="research-interests-heading">Research Interests</h4>
+					<div class="interests-row">
+						<span class="interest-pill">Weather Extremes</span>
+						<span class="interest-pill">Seasonal Forecasting</span>
+						<span class="interest-pill">Floods & Droughts</span>
+						<span class="interest-pill">Green Energy</span>
+						<span class="interest-pill">Impacts & Hazards</span>
+						<span class="interest-pill">Science Communication</span>
+						<span class="interest-pill">Community Building</span>
+					</div>
+				</div>
+			</div>
 		</div>
 
-		<main class="wrapper stack gap-20 lg:gap-48">
+		<main class="wrapper stack gap-20 lg:gap-30">
+			<!-- 1. Projects -->
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Projects</h3>
-					<p>Work and projects across AI, meteorology, and scientific communication.</p>
+					<h2>Projects</h2>
+					<p>Selected projects in AI, meteorology, and scientific communication.</p>
 				</header>
 
 				<div class="gallery">
@@ -72,68 +102,10 @@ const projects = (await getCollection('work'))
 				</div>
 			</section>
 
-			<section class="section with-background bg-variant">
+			<!-- 2. Publications -->
+			<section id="publications" class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Experience</h3>
-				</header>
-
-				<div class="gallery">
-					<div class="timeline">
-						<div class="timeline-entry">
-							<div class="timeline-marker"></div>
-							<div class="timeline-content">
-								<p class="timeline-date">2025 – 2029</p>
-								<h4>PhD in AI & Meteorology — University College Dublin</h4>
-								<p class="timeline-org">School of Civil Engineering · Decarb-AI Programme</p>
-								<p class="timeline-grade">Innovate for Ireland iScholar</p>
-								<p class="timeline-detail">Machine learning · AI · subseasonal-to-seasonal prediction · multi-hazard events · high-performance computing</p>
-							</div>
-						</div>
-						<div class="timeline-entry">
-							<div class="timeline-marker"></div>
-							<div class="timeline-content">
-								<p class="timeline-date">2025 – present</p>
-								<h4>Tutor & Demonstrator — University College Dublin</h4>
-								<p class="timeline-org">School of Civil Engineering</p>
-								<p class="timeline-detail">Programming tutorials · mathematical problem-solving · undergraduate teaching · scientific communication</p>
-							</div>
-						</div>
-						<div class="timeline-entry">
-							<div class="timeline-marker"></div>
-							<div class="timeline-content">
-								<p class="timeline-date">2024 – 2025</p>
-								<h4>Aeronautical Meteorological Officer — Met Éireann</h4>
-								<p class="timeline-org">Aeronautical Meteorology Division</p>
-								<p class="timeline-detail">Aviation forecasting · observational products · forecast interpretation · <a href="https://rmets.onlinelibrary.wiley.com/doi/10.1002/joc.70185" target="_blank" rel="noopener">data rescue for climate research</a></p>
-							</div>
-						</div>
-						<div class="timeline-entry">
-							<div class="timeline-marker"></div>
-							<div class="timeline-content">
-								<p class="timeline-date">2023 – 2024</p>
-								<h4>MSc Atmosphere, Ocean and Climate — University of Reading</h4>
-								<p class="timeline-org">Department of Meteorology</p>
-								<p class="timeline-grade">Distinction · Dissertation A</p>
-								<p class="timeline-detail">Numerical modelling · fluid dynamics · oceanography · weather forecasting · climate change</p>
-							</div>
-						</div>
-						<div class="timeline-entry">
-							<div class="timeline-marker"></div>
-							<div class="timeline-content">
-								<p class="timeline-date">2018 – 2022</p>
-								<h4>BSc Physics — University College Dublin</h4>
-								<p class="timeline-org">School of Physics</p>
-								<p class="timeline-grade">2:1 · Dissertation A+</p>
-								<p class="timeline-detail">Computational physics · advanced laboratory · numerical modelling · data analysis</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section id="publications" class="section with-background">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Publications</h3>
+					<h2>Publications</h2>
 				</header>
 
 				<div class="gallery">
@@ -144,7 +116,7 @@ const projects = (await getCollection('work'))
 								<h4>Water Harvesting by Thermoresponsive Ionic Liquids: A Molecular Dynamics Study of the Water Absorption Kinetics and of the Role of Nanostructuring</h4>
 								<p class="pub-authors">Nancy C. Forero-Martinez, Robinson Cortes-Huerto, Lainey Ward, Pietro Ballone</p>
 								<p class="pub-journal"><em>The Journal of Physical Chemistry B</em> · Volume 127, Issue 24 · June 2023 · Open Access</p>
-								<p class="pub-desc">Open-access paper investigating water harvesting from the atmosphere using thermoresponsive ionic liquids, with molecular dynamics simulations used to study absorption kinetics and nanostructuring.</p>
+								<p class="pub-desc">Molecular dynamics simulations of how thermoresponsive ionic liquids absorb water from the atmosphere, looking at absorption kinetics and the role of nanostructuring.</p>
 								<div class="pub-tags">
 									<span class="pub-tag">Computational Physics</span>
 									<span class="pub-tag">Physical Chemistry</span>
@@ -157,9 +129,85 @@ const projects = (await getCollection('work'))
 				</div>
 			</section>
 
+			<!-- 3. Experience -->
+			<section class="section with-background">
+				<header class="section-header stack gap-2 lg:gap-4">
+					<h2>Experience</h2>
+				</header>
+
+				<div class="gallery">
+					<div class="timeline">
+						<div class="timeline-entry">
+							<div class="timeline-marker"></div>
+							<div class="timeline-content">
+								<p class="timeline-date">2025 – 2029</p>
+								<div class="timeline-title-row">
+									<img class="timeline-logo" src="/assets/logos/ucd.png" alt="UCD logo" loading="lazy" />
+									<h4>PhD in AI & Meteorology — University College Dublin</h4>
+								</div>
+								<p class="timeline-org">School of Civil Engineering · Decarb-AI Programme</p>
+								<p class="timeline-grade">Innovate for Ireland iScholar</p>
+								<p class="timeline-detail">Machine learning · AI · subseasonal-to-seasonal prediction · multi-hazard events · high-performance computing</p>
+							</div>
+						</div>
+						<div class="timeline-entry">
+							<div class="timeline-marker"></div>
+							<div class="timeline-content">
+								<p class="timeline-date">2025 – present</p>
+								<div class="timeline-title-row">
+									<img class="timeline-logo" src="/assets/logos/ucd.png" alt="UCD logo" loading="lazy" />
+									<h4>Tutor & Demonstrator — University College Dublin</h4>
+								</div>
+								<p class="timeline-org">School of Civil Engineering</p>
+								<p class="timeline-detail">STAT10060 Statistical Modelling · MATH10290 Linear Algebra for Science</p>
+							</div>
+						</div>
+						<div class="timeline-entry">
+							<div class="timeline-marker"></div>
+							<div class="timeline-content">
+								<p class="timeline-date">2024 – 2025</p>
+								<div class="timeline-title-row">
+									<img class="timeline-logo timeline-logo--wide" src="/assets/logos/met-eireann.png" alt="Met Éireann logo" loading="lazy" />
+									<h4>Aeronautical Meteorological Officer — Met Éireann</h4>
+								</div>
+								<p class="timeline-org">Aeronautical Meteorology Division</p>
+								<p class="timeline-detail">Aviation forecasting · observational products · forecast interpretation · <a href="https://rmets.onlinelibrary.wiley.com/doi/10.1002/joc.70185" target="_blank" rel="noopener">volunteer data rescue (acknowledged)</a></p>
+							</div>
+						</div>
+						<div class="timeline-entry">
+							<div class="timeline-marker"></div>
+							<div class="timeline-content">
+								<p class="timeline-date">2023 – 2024</p>
+								<div class="timeline-title-row">
+									<img class="timeline-logo" src="/assets/logos/reading.png" alt="University of Reading logo" loading="lazy" />
+									<h4>MSc Atmosphere, Ocean and Climate — University of Reading</h4>
+								</div>
+								<p class="timeline-org">Department of Meteorology</p>
+								<p class="timeline-grade">Distinction · Dissertation A</p>
+								<p class="timeline-detail">Numerical modelling · fluid dynamics · oceanography · weather forecasting · climate change</p>
+							</div>
+						</div>
+						<div class="timeline-entry">
+							<div class="timeline-marker"></div>
+							<div class="timeline-content">
+								<p class="timeline-date">2018 – 2022</p>
+								<div class="timeline-title-row">
+									<img class="timeline-logo" src="/assets/logos/ucd.png" alt="UCD logo" loading="lazy" />
+									<h4>BSc Physics — University College Dublin</h4>
+								</div>
+								<p class="timeline-org">School of Physics</p>
+								<p class="timeline-grade">2:1 · Dissertation A+</p>
+								<p class="timeline-detail">Computational physics · advanced laboratory · numerical modelling · data analysis</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 4. Recognition -->
 			<section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Recognition</h3>
+					<h2>Recognition</h2>
 				</header>
 
 				<div class="gallery">
@@ -172,7 +220,7 @@ const projects = (await getCollection('work'))
 						<div class="impact-card">
 							<Icon icon="trophy" color="var(--accent-regular)" size="2rem" />
 							<h4>UCD Entrance Scholar</h4>
-							<p>Academic excellence on entry to University College Dublin.</p>
+							<p>Awarded on entry to University College Dublin for academic performance.</p>
 						</div>
 						<div class="impact-card">
 							<Icon icon="trophy" color="var(--accent-regular)" size="2rem" />
@@ -188,9 +236,59 @@ const projects = (await getCollection('work'))
 				</div>
 			</section>
 
-			<section class="section with-background with-cta">
+			<!-- 5. Blog -->
+			<section class="section with-background">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Development</h3>
+					<h2>Latest from The Ensemble Edit</h2>
+					<p>Recent posts from the UCD postgraduate blog I run.</p>
+				</header>
+
+				<div class="gallery">
+					<div class="blog-cards">
+						<a class="blog-card" href="https://the-ensemble-site.vercel.app/blog/when-storms-get-named" target="_blank" rel="noopener">
+							<div class="blog-img-wrap">
+								<img class="blog-img" src="/assets/blog/when-storms-get-named.jpg" alt="When Do Storms Get Named" loading="lazy" />
+							</div>
+							<div class="blog-body">
+								<span class="blog-track">Research</span>
+								<p class="blog-date">Mar 11, 2026</p>
+								<h4>When Do Storms Get Named, and Where Do the Names Come From?</h4>
+								<p class="blog-excerpt">How storms affecting Ireland get named, who submits them, and why I've already tried to get my own name on the list.</p>
+								<span class="blog-read">Read post →</span>
+							</div>
+						</a>
+						<a class="blog-card" href="https://the-ensemble-site.vercel.app/blog/claude-code-new-skill-alert" target="_blank" rel="noopener">
+							<div class="blog-img-wrap">
+								<img class="blog-img" src="/assets/blog/claude-code-new-skill-alert.png" alt="Claude Code New Skill Alert" loading="lazy" />
+							</div>
+							<div class="blog-body">
+								<span class="blog-track">PhD Tips</span>
+								<p class="blog-date">Mar 7, 2026</p>
+								<h4>Claude Code: New Skill Alert! (PART I)</h4>
+								<p class="blog-excerpt">From ChatGPT copy-paste to agentic assistants: expanding the kitchen with Claude Code.</p>
+								<span class="blog-read">Read post →</span>
+							</div>
+						</a>
+						<a class="blog-card" href="https://the-ensemble-site.vercel.app/blog/claude-code-moral-dilemma" target="_blank" rel="noopener">
+							<div class="blog-img-wrap">
+								<img class="blog-img" src="/assets/blog/claude-code-moral-dilemma.png" alt="Claude Code Moral Dilemma" loading="lazy" />
+							</div>
+							<div class="blog-body">
+								<span class="blog-track">Discussion</span>
+								<p class="blog-date">Mar 7, 2026</p>
+								<h4>Claude Code: Moral Dilemma Alert! (PART II)</h4>
+								<p class="blog-excerpt">Agentic assistants: the vibes are good. The ethics are messier.</p>
+								<span class="blog-read">Read post →</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- 6. Development -->
+			<section class="section with-background bg-variant with-cta">
+				<header class="section-header stack gap-2 lg:gap-4">
+					<h2>Development</h2>
 				</header>
 
 				<div class="gallery">
@@ -250,7 +348,10 @@ const projects = (await getCollection('work'))
 	}
 
 	.roles {
-		display: none;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		justify-content: center;
 	}
 
 	.hero-detail {
@@ -276,8 +377,7 @@ const projects = (await getCollection('work'))
 
 		.roles {
 			margin-top: 0.5rem;
-			display: flex;
-			gap: 0.5rem;
+			justify-content: flex-start;
 		}
 
 		.hero img {
@@ -331,7 +431,7 @@ const projects = (await getCollection('work'))
 		color: var(--gray-300);
 	}
 
-	.section-header h3 {
+	.section-header h2 {
 		font-size: var(--text-2xl);
 	}
 
@@ -351,7 +451,7 @@ const projects = (await getCollection('work'))
 			font-size: var(--text-lg);
 		}
 
-		.section-header h3 {
+		.section-header h2 {
 			font-size: var(--text-4xl);
 		}
 
@@ -410,6 +510,15 @@ const projects = (await getCollection('work'))
 		box-shadow: 0 0 0 2px var(--accent-regular);
 	}
 
+	.timeline-entry:first-child .timeline-marker {
+		animation: marker-pulse 2s ease-in-out infinite;
+	}
+
+	@keyframes marker-pulse {
+		0%, 100% { box-shadow: 0 0 0 2px var(--accent-regular); }
+		50% { box-shadow: 0 0 0 5px var(--accent-overlay); }
+	}
+
 	.timeline-content h4 {
 		font-size: var(--text-lg);
 		color: var(--gray-0);
@@ -448,6 +557,31 @@ const projects = (await getCollection('work'))
 		text-underline-offset: 0.2em;
 	}
 
+	.timeline-title-row {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.timeline-title-row h4 {
+		flex: 1;
+		min-width: 0;
+	}
+
+	.timeline-logo {
+		width: 2rem;
+		height: 2rem;
+		object-fit: contain;
+		flex-shrink: 0;
+		border-radius: 0.25rem;
+	}
+
+	.timeline-logo--wide {
+		width: 3rem;
+		height: 2rem;
+		border-radius: 0.25rem;
+	}
+
 	@media (min-width: 50em) {
 		.timeline {
 			padding-left: 3rem;
@@ -465,6 +599,16 @@ const projects = (await getCollection('work'))
 
 		.timeline-content h4 {
 			font-size: var(--text-xl);
+		}
+
+		.timeline-logo {
+			width: 2.5rem;
+			height: 2.5rem;
+		}
+
+		.timeline-logo--wide {
+			width: 3.75rem;
+			height: 2.5rem;
 		}
 	}
 
@@ -628,7 +772,7 @@ const projects = (await getCollection('work'))
 
 	@media (min-width: 50em) {
 		.impact-cards {
-			grid-template-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(2, 1fr);
 		}
 
 		.impact-card {
@@ -683,5 +827,259 @@ const projects = (await getCollection('work'))
 		.pd-tile h4 {
 			font-size: var(--text-md);
 		}
+	}
+
+	/* ====================================================== */
+	/* PhD Research card */
+
+	.research-card {
+		border: 1px solid var(--gray-800);
+		border-radius: 1rem;
+		padding: 1.5rem;
+		background: var(--gradient-subtle);
+		box-shadow: var(--shadow-sm);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.research-card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 4px;
+		height: 100%;
+		background: var(--gradient-accent);
+		border-radius: 4px 0 0 4px;
+	}
+
+	.research-label {
+		display: inline-block;
+		padding: 0.25rem 0.75rem;
+		font-size: var(--text-sm);
+		font-weight: 600;
+		color: var(--accent-text-over);
+		background: var(--accent-regular);
+		border-radius: 999rem;
+		margin-bottom: 0.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+	}
+
+	.research-title {
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+		margin: 0 0 0.5rem;
+	}
+
+	.research-org {
+		font-size: var(--text-sm);
+		color: var(--gray-300);
+		margin: 0 0 0.75rem;
+	}
+
+	.research-desc {
+		font-size: var(--text-md);
+		color: var(--gray-300);
+		margin: 0 0 1rem;
+		line-height: 1.6;
+	}
+
+	.research-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+	}
+
+	.research-tag {
+		padding: 0.25rem 0.65rem;
+		font-size: var(--text-sm);
+		color: var(--accent-text-over);
+		background: var(--method-bg);
+		border-radius: 999rem;
+		white-space: nowrap;
+	}
+
+	@media (min-width: 50em) {
+		.research-card {
+			padding: 2rem 2rem 2rem 2.5rem;
+			border-radius: 1.5rem;
+		}
+
+		.research-title {
+			font-size: var(--text-2xl);
+		}
+
+		.research-desc {
+			font-size: var(--text-lg);
+		}
+	}
+
+	/* ====================================================== */
+	/* Research Interests (inside research card) */
+
+	.research-interests {
+		margin-top: 0.75rem;
+		padding-top: 1rem;
+		border-top: 1px solid var(--gray-800);
+	}
+
+	.research-interests-heading {
+		font-size: var(--text-md);
+		color: var(--gray-300);
+		margin: 0 0 0.75rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+	}
+
+	.interests-row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+	}
+
+	.interest-pill {
+		padding: 0.3rem 0.75rem;
+		font-size: var(--text-sm);
+		color: var(--gray-200);
+		border: 1px solid var(--gray-800);
+		border-radius: 999rem;
+		background: var(--gray-999_40);
+		white-space: nowrap;
+		transition: border-color 0.2s ease, color 0.2s ease;
+	}
+
+	.interest-pill:hover {
+		border-color: var(--accent-regular);
+		color: var(--accent-regular);
+	}
+
+	/* ====================================================== */
+	/* Blog cards */
+
+	.blog-cards {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+
+	.blog-card {
+		display: flex;
+		flex-direction: column;
+		border: 1px solid var(--gray-800);
+		border-radius: 1rem;
+		overflow: hidden;
+		background: var(--gradient-subtle);
+		box-shadow: var(--shadow-sm);
+		text-decoration: none;
+		transition: box-shadow 0.3s ease, transform 0.3s ease;
+	}
+
+	.blog-card:hover {
+		box-shadow: var(--shadow-md);
+		transform: translateY(-3px);
+	}
+
+	.blog-img-wrap {
+		overflow: hidden;
+	}
+
+	.blog-img {
+		width: 100%;
+		height: 10rem;
+		object-fit: cover;
+		display: block;
+		transition: transform 0.4s ease;
+	}
+
+	.blog-card:hover .blog-img {
+		transform: scale(1.03);
+	}
+
+	.blog-body {
+		display: flex;
+		flex-direction: column;
+		gap: 0.35rem;
+		padding: 1rem 1.25rem 1.25rem;
+	}
+
+	.blog-track {
+		display: inline-block;
+		align-self: flex-start;
+		padding: 0.2rem 0.6rem;
+		font-size: var(--text-sm);
+		font-weight: 600;
+		color: var(--accent-text-over);
+		background: var(--accent-regular);
+		border-radius: 999rem;
+		text-transform: uppercase;
+		letter-spacing: 0.03em;
+	}
+
+	.blog-date {
+		font-size: var(--text-sm);
+		color: var(--gray-400);
+		margin: 0.25rem 0 0;
+	}
+
+	.blog-card h4 {
+		font-size: var(--text-lg);
+		color: var(--gray-0);
+		margin: 0.25rem 0 0;
+	}
+
+	.blog-excerpt {
+		font-size: var(--text-sm);
+		color: var(--gray-300);
+		margin: 0.25rem 0 0;
+		line-height: 1.5;
+	}
+
+	.blog-read {
+		font-size: var(--text-sm);
+		color: var(--accent-regular);
+		font-weight: 600;
+		margin-top: 0.5rem;
+	}
+
+	@media (min-width: 50em) {
+		.blog-cards {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		.blog-card {
+			border-radius: 1.5rem;
+		}
+	}
+
+	/* ====================================================== */
+	/* Hover micro-interactions */
+
+	.impact-card {
+		transition: box-shadow 0.3s ease, transform 0.3s ease;
+	}
+
+	.impact-card:hover {
+		box-shadow: var(--shadow-md);
+		transform: translateY(-3px);
+	}
+
+	.pub-item {
+		transition: box-shadow 0.3s ease, transform 0.3s ease;
+	}
+
+	.pub-item:hover {
+		box-shadow: var(--shadow-md);
+		transform: translateY(-3px);
+	}
+
+	.pd-tile {
+		transition: box-shadow 0.3s ease, transform 0.3s ease;
+	}
+
+	.pd-tile:hover {
+		box-shadow: var(--shadow-md);
+		transform: translateY(-2px);
 	}
 </style>

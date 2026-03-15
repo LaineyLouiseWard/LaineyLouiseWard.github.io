@@ -24,7 +24,7 @@ methods:
 
 My MSc dissertation at the University of Reading quantified the UK's need for long-duration underground hydrogen storage to achieve net-zero carbon emissions by 2050. The research examined demand electrification scenarios, offshore wind power deployment, and the meteorological drivers behind energy storage deficits — identifying the weather patterns that cause prolonged shortfalls in renewable generation. The work drew on ERA5 reanalysis data and European-derived power datasets, and was awarded the Met Office MSc Dissertation Prize for outstanding research.
 
-I presented this research at the 2024 Next Generation Energy and Climate Modelling Workshop (NextGenEC), connecting with researchers whose foundational work informed my own analysis.
+I presented this work at the 2024 Next Generation Energy and Climate Modelling Workshop (NextGenEC).
 
 <img class="content-img" src="/assets/diss-power-storage.png" alt="Time series of power anomalies and storage for a depletion event and recovery period" />
 

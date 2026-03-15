@@ -1,8 +1,8 @@
 ---
 title: Research Literature Monitor
 publishDate: 2025-03-14 00:00:00
-img: /assets/publication.gif
-img_alt: Placeholder visual for the research literature monitor project
+img: /assets/placeholder.svg
+img_alt: Placeholder — image coming soon
 description: |
   An automated RSS and LLM pipeline that scans newly published research papers, filters them for relevance to subseasonal-to-seasonal forecasting and compound weather extremes, and logs matched papers for review.
 tags:

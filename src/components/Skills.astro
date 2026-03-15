@@ -4,17 +4,23 @@ import Icon from './Icon.astro';
 
 <section class="box skills">
 	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<div class="icon-circle">
+			<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
+		</div>
 		<h2>Climate & Weather AI</h2>
 		<p>Machine learning approaches for subseasonal-to-seasonal forecasting and extreme weather prediction.</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
+		<div class="icon-circle">
+			<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
+		</div>
 		<h2>Forecast Data Analysis</h2>
-		<p>Python tools for meteorological datasets, reanalysis, and forecast products.</p>
+		<p>Working with meteorological datasets, reanalysis products, and forecast data in Python.</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="pencil-line" color="var(--accent-regular)" size="2.5rem" gradient />
+		<div class="icon-circle">
+			<Icon icon="pencil-line" color="var(--accent-regular)" size="2.5rem" gradient />
+		</div>
 		<h2>Science Communication</h2>
 		<p>Research presentations, written reports, visualisations, and undergraduate teaching.</p>
 	</div>
@@ -27,6 +33,12 @@ import Icon from './Icon.astro';
 		padding: 1.5rem;
 		background-color: var(--gray-999_40);
 		box-shadow: var(--shadow-sm);
+		transition: box-shadow 0.3s ease, transform 0.3s ease;
+	}
+
+	.box:hover {
+		box-shadow: var(--shadow-md);
+		transform: translateY(-3px);
 	}
 
 	.skills {
@@ -41,6 +53,16 @@ import Icon from './Icon.astro';
 
 	.skills p {
 		color: var(--gray-400);
+	}
+
+	.icon-circle {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 4rem;
+		height: 4rem;
+		border-radius: 50%;
+		background: var(--accent-subtle-overlay);
 	}
 
 	@media (min-width: 50em) {

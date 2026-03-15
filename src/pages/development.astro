@@ -16,7 +16,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				<!-- 2026 -->
 				<div class="tl-year-label">2026</div>
 
-				<div class="tl-entry tl-left">
+				<div class="tl-entry reveal tl-left">
 					<div class="tl-marker"></div>
 					<div class="tl-card">
 						<h2 class="tl-title">Women in Mathematics Poster Exhibition</h2>
@@ -26,7 +26,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 					</div>
 				</div>
 
-				<div class="tl-entry tl-right">
+				<div class="tl-entry reveal tl-right">
 					<div class="tl-marker"></div>
 					<div class="tl-card">
 						<h2 class="tl-title">ARK Presentation Training</h2>
@@ -39,7 +39,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				<!-- 2025 -->
 				<div class="tl-year-label">2025</div>
 
-				<div class="tl-entry tl-left">
+				<div class="tl-entry reveal tl-left">
 					<div class="tl-marker"></div>
 					<div class="tl-card">
 						<h2 class="tl-title">Dragon’s Den Competition Programme</h2>
@@ -61,7 +61,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 					</div>
 				</div>
 
-				<div class="tl-entry tl-right">
+				<div class="tl-entry reveal tl-right">
 					<div class="tl-marker"></div>
 					<div class="tl-card">
 						<h2 class="tl-title">School of Mathematics & Statistics Postgraduate Committee</h2>
@@ -71,12 +71,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 					</div>
 				</div>
 
-				<div class="tl-entry tl-left">
+				<div class="tl-entry reveal tl-left">
 					<div class="tl-marker"></div>
 					<div class="tl-card">
 						<h2 class="tl-title">AI Climate Sustainability Sandbox</h2>
 						<p class="tl-org">Co-Centre for Climate + Biodiversity + Water · Trinity College Dublin</p>
-						<p class="tl-desc">Five-day industry challenge bringing together PhD students, early-career researchers, and domain experts to build AI-powered solutions for real-world sustainability problems, including invasive species detection and environmental monitoring.</p>
+						<p class="tl-desc">Five-day challenge pairing PhD students with industry partners to tackle sustainability problems using AI — our team worked on invasive species detection from satellite imagery.</p>
 						<div class="tl-slides" data-carousel>
 							<div class="tl-slide-track">
 								<img src="/assets/slides/sandbox/slide-01.png" alt="Sandbox presentation — slide 1" loading="lazy" />
@@ -106,7 +106,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 					</div>
 				</div>
 
-				<div class="tl-entry tl-right">
+				<div class="tl-entry reveal tl-right">
 					<div class="tl-marker"></div>
 					<div class="tl-card">
 						<h2 class="tl-title">ICHEC HPC Training</h2>
@@ -115,7 +115,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 					</div>
 				</div>
 
-				<div class="tl-entry tl-left">
+				<div class="tl-entry reveal tl-left">
 					<div class="tl-marker"></div>
 					<div class="tl-card">
 						<h2 class="tl-title">IBM AI Foundation Models Workshop</h2>
@@ -131,17 +131,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 					</div>
 				</div>
 
-				<div class="tl-entry tl-right">
+				<div class="tl-entry reveal tl-right">
 					<div class="tl-marker"></div>
 					<div class="tl-card">
 						<h2 class="tl-title">UCD Physics Careers Talk</h2>
 						<p class="tl-org">UCD School of Physics</p>
-						<p class="tl-desc">Career panel providing advice to current UCD physics students as a UCD alumni speaker.</p>
+						<p class="tl-desc">Spoke on a careers panel for current UCD physics students about routes into meteorology and research.</p>
 						<img class="tl-card-img" src="/assets/careers-talk.jpeg" alt="UCD Physics careers panel" loading="lazy" />
 					</div>
 				</div>
 
-				<div class="tl-entry tl-left">
+				<div class="tl-entry reveal tl-left">
 					<div class="tl-marker"></div>
 					<div class="tl-card">
 						<h2 class="tl-title">ECMWF Anemoi Training</h2>
@@ -151,7 +151,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 					</div>
 				</div>
 
-				<div class="tl-entry tl-right">
+				<div class="tl-entry reveal tl-right">
 					<div class="tl-marker"></div>
 					<div class="tl-card">
 						<h2 class="tl-title">Intellectual Property Training</h2>
@@ -163,7 +163,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				<!-- 2024 -->
 				<div class="tl-year-label">2024</div>
 
-				<div class="tl-entry tl-left">
+				<div class="tl-entry reveal tl-left">
 					<div class="tl-marker"></div>
 					<div class="tl-card">
 						<h2 class="tl-title">NextGenEC 2024: Energy-Climate Modelling Workshop</h2>
@@ -174,7 +174,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 					</div>
 				</div>
 
-				<div class="tl-entry tl-right">
+				<div class="tl-entry reveal tl-right">
 					<div class="tl-marker"></div>
 					<div class="tl-card">
 						<h2 class="tl-title">UK Met Office Forecasting</h2>
@@ -297,6 +297,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		display: flex;
 		flex-direction: column;
 		gap: 0.15rem;
+		transition:
+			box-shadow 0.3s ease,
+			transform 0.3s ease;
+	}
+
+	.tl-card:hover {
+		box-shadow: var(--shadow-md);
+		transform: translateY(-3px);
 	}
 
 	.tl-title {

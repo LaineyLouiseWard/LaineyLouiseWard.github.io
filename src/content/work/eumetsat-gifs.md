@@ -13,6 +13,6 @@ tags:
   - Cartopy
 ---
 
-Satellite storm visualisations created using Python and the EUMETView APIs for the AIMSIR research centre exhibition. The visuals focus on major Irish-impact storms including Ophelia, Isha, and Éowyn, retrieving a range of satellite composites from EUMETView — such as 10.8 µm infrared, RGB Airmass, and 24-hour Microphysics — to capture each storm from different perspectives.
+Animated satellite visualisations of major Irish-impact storms — Ophelia, Isha, and Éowyn — made for the AIMSIR research centre exhibition. Built with Python and the EUMETView APIs, pulling composites like 10.8 µm infrared, RGB Airmass, and 24-hour Microphysics to show each storm from different angles.
 
 <a href="https://github.com/LaineyLouiseWard/EUMETSAT_gifs" class="github-btn" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
